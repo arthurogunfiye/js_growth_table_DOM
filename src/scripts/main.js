@@ -29,7 +29,7 @@ appendRow.addEventListener('click', () => {
     const newRow = table.insertRow();
 
     for (let i = 0; i < getColCount(); i++) {
-      newRow.insertCell();
+      if (getColCount() >= MIN_SIZE) newRow.insertCell();
     }
   }
 
